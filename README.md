@@ -1,27 +1,41 @@
-# Todolist
+# Lista de Tarefas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+## Descrição
 
-## Development server
+### Objetivos da Lista de tarefas:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Receber um input em texto
 
-## Code scaffolding
+- Salvar as tarefas em cartões
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Sinalizar com cores qual a prioridade da tarefa, sendo: vermelho = urgente; amarelo = prioridade média; azul = menos importante; verde = tarefa concluída
 
-## Build
+- Possibilidade de adicionar, remover e editar tarefas
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Desafios para desenvolver:
 
-## Running unit tests
+- Criar o projeto
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Criar o componente de input da tarefa
 
-## Running end-to-end tests
+- Criar o componente que receberá os cartões
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+- Criar os cartões
 
-## Further help
+- Implementar botão que adiciona a tarefa
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Criar botões que deleta e edita tarefas nos cartões
+
+- Integrar a API 
+
+### Inspirações:
+
+- [Google Keep](https://criatilha.com.br/wp-content/uploads/2018/05/google-keep.jpg)
+
+- [Google Keep 2](https://img.ibxk.com.br/2014/11/27/27085007394007.jpg?w=1120&h=420&mode=crop&scale=both)
+
+- [Trello](https://d2k1ftgv7pobq7.cloudfront.net/meta/u/res/images/create-a-board/2a6cc1bc24e782bb4dd4de4c3120054d/01.png)
+
+### API de Consulta
+
+- 
