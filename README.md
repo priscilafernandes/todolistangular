@@ -1,6 +1,6 @@
 # Lista de Tarefas
 
-### Objetivos da Lista de tarefas:
+### Objetivos:
 
 - Receber um input em texto
 
