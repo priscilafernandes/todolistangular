@@ -5,6 +5,32 @@
 
 .card-actions {
   padding: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-edit, .icon-delete {
+  border-radius: 5px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.icon-edit {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.icon-edit:hover {
+  background-color: blue;
+}
+
+.icon-delete {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.icon-delete:hover {
+  background-color: red;
 }
 
 .card-content {
@@ -24,11 +50,11 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #fff;
   border-radius: 5px;
+  background: none;
+  border: solid 1px #fff;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: none;
-  border: solid 1px #fff;
+  background-color: #fff;
 }
