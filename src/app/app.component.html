@@ -1,7 +1,14 @@
-<h1>{{ title }}</h1>
+<mat-grid-list cols="1" class="app-container">
+  <mat-grid-list cols="1" rowHeight="10em">
+    <mat-grid-tile>
+      <h1 class="title">{{ title }}</h1>
+    </mat-grid-tile>
 
+    <mat-grid-tile>
+      <app-text class="app-text"></app-text>
+    </mat-grid-tile>
+  </mat-grid-list>
 
-<div>
-    <app-text></app-text>
-    <app-cards-container></app-cards-container>
-</div>
+  <app-cards-container></app-cards-container>
+
+</mat-grid-list>
