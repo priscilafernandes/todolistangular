@@ -1,0 +1,12 @@
+.cards-grid {
+  width: 90%;
+}
+
+.grid-card {
+  display: flex;
+  justify-content: center;
+}
+
+.app-card {
+  width: 100%;
+}
