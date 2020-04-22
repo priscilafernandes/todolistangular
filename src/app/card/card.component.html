@@ -5,8 +5,6 @@
   </mat-card-actions>
 
   <mat-card-content class="card-content">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Nulla vitae nulla congue, venenatis tortor sed, consequat odio.
-      Nullam tristique nunc non pretium ultrices.</p>
+    <p *ngFor="let hero of heroes">{{hero}}</p>
   </mat-card-content>
 </mat-card>

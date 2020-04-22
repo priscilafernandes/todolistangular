@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TextComponent } from '../text/text.component';
 
 @Component({
   selector: 'app-card',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   tasks: string[] = []
-
+  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
   constructor() { }
 
   ngOnInit(): void {
@@ -23,6 +24,11 @@ export class CardComponent implements OnInit {
           cor: "rgb(118, 239, 64)"
         }  
       ] 
+    }
+  }
+  addHero(newHero: string){
+    if (newHero) {
+    this.heroes.push(newHero);
     }
   }
 
