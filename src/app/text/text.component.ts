@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -7,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./text.component.css']
 })
 export class TextComponent implements OnInit {
-  
+  // contentText = new EventEmitter<string> ();
+  contentText:string
+
   constructor() { }
 
   ngOnInit(): void {
   }
   
+  getContent(event) {
+    // this.contentText.emits(event.target.value);
+    this.contentText = event.target.value
+    console.log(this.contentText);
+    
+  }
+  getContentClick(event){
+    event.preventDefault()
+    console.log(this.contentText);
+    
+  }
 }
