@@ -1,8 +1,15 @@
 <form class="text-form">
   <mat-form-field class="text-form-field">
     <mat-label class="text-label">Tarefa</mat-label>
-    <textarea matInput placeholder="Digite..." cols="100" class="textarea" #newHero (keyup.enter)="addHero(newHero.value)"
-    (blur)="addHero(newHero.value); newHero.value='' "></textarea>
+
+    <textarea
+      matInput placeholder="Digite..."
+      cols="100"
+      class="textarea"
+      #newHero (keyup.enter)="addHero(newHero.value)"
+      (blur)="addHero(newHero.value); newHero.value='' ">
+    </textarea>
   </mat-form-field>
+
   <button mat-button color="primary" class="text-btn" (click)="addHero(newHero.value)">Adicionar</button>
 </form>
