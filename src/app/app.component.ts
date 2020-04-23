@@ -5,19 +5,28 @@ import { CardModel } from './card_model';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-
 })
+
 export class AppComponent {
   title = 'Minhas Tarefas';
-  card = CardModel
 
-  public cardContent: string;
+  public card: any; // newModel
+  public model: CardModel // model
+  public modelContent: string
+  public modelColor: string
+
+  constructor() { }
 
   ngOnInit(){
-    console.log('test', this.card);
   }
 
-  public emitContent(text: string): any {
-    console.log("função app: ", text)
+  public emitContent(content: string): any { // @Output
+    this.card = new CardModel(content, "#3f51b5")
+    this.model = this.card
+
+    this.modelContent = this.model.content
+    this.modelColor = this.model.color
+
+    console.log("CONTEUDO", this.model.content)
   }
 }

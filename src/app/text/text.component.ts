@@ -8,8 +8,9 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 export class TextComponent implements OnInit {
 
-  @Input() public contentText: string;
   @Output() emitContent = new EventEmitter<string> ();
+
+  contentInput: string;
 
   constructor() { }
 
@@ -18,19 +19,13 @@ export class TextComponent implements OnInit {
 
   getContent(event: any) {
     event.preventDefault();
-
-    this.contentText = event.target.value;
-    this.emitContent.emit(this.contentText);
-
-    // console.log("função text: ", this.contentText)
+    this.contentInput = event.target.value;
+    this.emitContent.emit(this.contentInput);
   }
 
   getContentClick(event: any) {
     event.preventDefault();
-
-    this.emitContent.emit(this.contentText);
-
-    // console.log("função text: ", this.contentText)
+    this.emitContent.emit(this.contentInput);
   }
 
 }

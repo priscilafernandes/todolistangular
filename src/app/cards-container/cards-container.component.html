@@ -1,6 +1,6 @@
-<mat-grid-list cols="4" rowHeight="10em" gutterSize="1em" class="cards-container">
+<mat-grid-list cols="4" rowHeight="10em" gutterSize="1em" class="cards-container"> <!-- *ngFor="card of template" -->
   <mat-grid-tile class="grid-card">
-    <app-card class="app-card"></app-card>
+    <app-card class="app-card" [content]="cardContent" [color]="cardColor"></app-card>
   </mat-grid-tile>
 
   <mat-grid-tile class="grid-card">

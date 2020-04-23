@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-cards-container',
@@ -7,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class CardsContainerComponent implements OnInit {
+  @Input() public cardContent: string;
+  @Input() public cardColor: string;
+
+  template = []
 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  clickTest(event) {
+    console.log(this.cardContent)
+    console.log(this.cardColor)
   }
 
 }
