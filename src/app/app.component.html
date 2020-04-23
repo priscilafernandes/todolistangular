@@ -1,4 +1,4 @@
-<mat-grid-list cols="1" class="app-container">
+<mat-grid-list cols="1" class="app-container" >
 
   <mat-grid-list cols="1" rowHeight="10em">
     <mat-grid-tile>
@@ -6,7 +6,11 @@
     </mat-grid-tile>
 
     <mat-grid-tile>
-      <app-text class="app-text"></app-text>
+      <app-text
+        class="app-text"
+        [contentText]="cardContent"
+        (emitContent)="emitContent($event)">
+      </app-text>
     </mat-grid-tile>
   </mat-grid-list>
 

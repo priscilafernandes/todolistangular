@@ -11,8 +11,13 @@ export class AppComponent {
   title = 'Minhas Tarefas';
   card = CardModel
 
+  public cardContent: string;
+
   ngOnInit(){
-    console.log('test'+this.card);
-    
+    console.log('test', this.card);
+  }
+
+  public emitContent(text: string): any {
+    console.log("função app: ", text)
   }
 }

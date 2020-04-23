@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-text',
@@ -8,17 +8,29 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 export class TextComponent implements OnInit {
 
+  @Input() public contentText: string;
   @Output() emitContent = new EventEmitter<string> ();
-
-  contentText:string
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getContent(event) {
-    this.emitContent.emit(event.target.value);
+  getContent(event: any) {
+    event.preventDefault();
+
+    this.contentText = event.target.value;
+    this.emitContent.emit(this.contentText);
+
+    // console.log("função text: ", this.contentText)
+  }
+
+  getContentClick(event: any) {
+    event.preventDefault();
+
+    this.emitContent.emit(this.contentText);
+
+    // console.log("função text: ", this.contentText)
   }
 
 }
