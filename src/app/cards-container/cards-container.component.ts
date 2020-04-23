@@ -10,8 +10,6 @@ export class CardsContainerComponent implements OnInit {
   @Input() public cardContent: string;
   @Input() public cardColor: string;
 
-  template = []
-
   constructor() { }
 
   ngOnInit(): void {
